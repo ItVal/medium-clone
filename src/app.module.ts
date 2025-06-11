@@ -9,7 +9,7 @@ import { UserModule } from './users/user.module';
 
 
 @Module({
-  imports: [ConfigModule.forRoot({ isGlobal: true }), TypeOrmModule.forRoot(dbConfig), TagModule, UserModule],
+  imports: [ConfigModule.forRoot({ isGlobal: true }), TypeOrmModule.forRoot(dbConfig), TagModule, ],
   controllers: [AppController],
   providers: [AppService],
 })
