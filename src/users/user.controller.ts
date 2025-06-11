@@ -1,5 +1,6 @@
 import { Controller, Post } from "@nestjs/common";
 import { UserService } from "./user.service";
+import { CreateUserDto } from "./dto/createUser.dto";
 
 @Controller()
 export class UserController {
@@ -7,7 +8,8 @@ export class UserController {
         private readonly userService: UserService, 
     ) {}
     @Post('users')
-    async findAll(): Promise<any> {
-        return this.userService.findAll();
+    async createUser(createUserData: CreateUserDto): Promise<any> {
+        return await this.userService.createUser(createUserData);
     }
 }
+
