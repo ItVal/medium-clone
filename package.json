@@ -20,7 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "db:drop": "yarn typeorm schema:drop -d src/ormConfig.ts",
-    "db:create": "yarn typeorm migration:generate src/migrations/CreateTags -d src/ormConfig.ts",
+    "db:create": "yarn typeorm migration:generate -d src/ormConfig.ts",
     "db:migrate": "yarn typeorm migration:run -d src/ormConfig.ts"
   },
   "dependencies": {
